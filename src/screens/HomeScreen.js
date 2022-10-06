@@ -26,6 +26,7 @@ class Home extends Component {
         console.log('[HomeScreen]');
         this.state = {
             loader_Visible: false,
+            datakeyword: ''
         };
 
     }
@@ -34,7 +35,7 @@ class Home extends Component {
         this.listener = EventRegister.addEventListener('Home', () => {
             console.log("Home");
             this.setState({
-                loader_Visible: true,
+                loader_Visible: false,
                 datakeyword: ''
             })
         })
