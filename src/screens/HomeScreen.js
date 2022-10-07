@@ -51,12 +51,10 @@ class Home extends Component {
             this.setState({ datakeyword: "" })
         } else {
             const data_keyword = [];
-            await _.map(data, (item, i) => {
+            _.map(data, (item, i) => {
                 let re_check = new RegExp(`${keyword}`);
-                let result_check_1 = re_check.test(`${item.name}`);
-                if (
-                    result_check_1 === true
-                ) {
+                let result_check = re_check.test(`${item.name}`);
+                if (result_check === true) {
                     data_keyword.push(item);
                 }
             });
