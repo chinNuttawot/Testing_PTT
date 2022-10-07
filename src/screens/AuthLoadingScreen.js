@@ -4,7 +4,6 @@ import {
   ImageBackground,
   View,
 } from 'react-native';
-import CustomButtom from '../components/CustomButtom';
 import {styles} from '../screens/HomeStyle'
 class Class extends Component {
   constructor(props) {
