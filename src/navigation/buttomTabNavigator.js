@@ -31,15 +31,7 @@ function ButtomTab(props, { navigation }) {
                         if (route.name === 'หน้าแรก') {
                             iconName = 'home';
                             size = focused ? 30 : 25;
-                        } else if (route.name === 'อื่นๆ') {
-                            // iconName = focused ? 'ios-list' : 'ios-list';
-                            iconName = 'bars';
-                            size = focused ? 30 : 25;
-                        } else if (route.name === 'ร้านค้า') {
-                            // iconName = focused ? 'ios-list' : 'ios-list';
-                            iconName = 'shoppingcart';
-                            size = focused ? 30 : 25;
-                        }
+                        } 
                         return <AntDesign name={iconName} size={size} color={color} />;
                     },
                     tabBarActiveTintColor: props.Darkblue,

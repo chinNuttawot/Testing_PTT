@@ -18,6 +18,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { styles } from '../screens/HomeStyle'
 import * as ImagePicker from 'expo-image-picker';
+import API from '../providers/API'
 library.add(fas, far);
 class Homeaddphoto extends Component {
     constructor(props) {
@@ -46,7 +47,7 @@ class Homeaddphoto extends Component {
             this.setState({ loader_Visible: false })
         })
     };
-    
+
     onSave = async () => {
         console.log("onSave");
         if (!this.state.nameImage.length > 0) {
@@ -62,6 +63,13 @@ class Homeaddphoto extends Component {
             path: this.state.image,
             name: this.state.nameImage
         }
+        // API.post('API-push-image', Data, `Bearer ${this.Token}`)
+        // .then((res)=> {
+
+        // })
+        // .catch((err)=> {
+
+        // })
         this.props.image.push(Data)
         EventRegister.emit('Home')
         this.props.navigation.goBack()
